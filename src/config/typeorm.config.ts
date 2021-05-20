@@ -9,4 +9,11 @@ export const typeOrmConfig : TypeOrmModuleOptions = {
     database: 'taskmanagement',
     entities: [__dirname + '/../**/*.entity{.ts,.js}'],
     synchronize: false,
+    migrationsRun: true,
+    logging: true,
+    migrations: [__dirname + '/../**/*.migration.{js,ts}'],
+    cli: {
+        migrationsDir: 'src/db/migrations',
+    },
+    migrationsTableName: "migrations_typeorm",
 }
