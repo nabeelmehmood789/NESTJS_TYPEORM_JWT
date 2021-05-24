@@ -1,7 +1,9 @@
 import {TypeOrmModuleOptions} from "@nestjs/typeorm";
+import * as config from "config";
 
+console.log(config.get("jwt"));
 export const typeOrmConfig : TypeOrmModuleOptions = {
-    type: 'mysql',
+    type: "mysql",
     host: 'localhost',
     port: 8889,
     username: 'root',
